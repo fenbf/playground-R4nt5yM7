@@ -5,6 +5,8 @@ This Basic template lets you get started quickly with a simple working example. 
 
 Please refer to the [documentation](https://tech.io/doc) to learn more about adding programming exercises within your contribution.
 
+@[test csv]({"stubs": ["cpp_param_test.cpp", "input.csv", "correct_output.csv"],"command": "sh ./run_with_param.sh cpp_param_test.cpp input.csv city London output.csv"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
