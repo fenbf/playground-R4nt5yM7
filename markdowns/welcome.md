@@ -7,6 +7,8 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[test csv]({"stubs": ["cpp_param_test.cpp", "input.csv", "correct_output.csv"],"command": "sh ./run_with_param.sh cpp_param_test.cpp input.csv city London output.csv"})
 
+@[makeInvestment]({"stubs": ["cpp_makeInvestment.cpp"],"command": "sh ./run.sh cpp_makeInvestment.cpp"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
