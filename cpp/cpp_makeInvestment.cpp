@@ -24,71 +24,86 @@ constructArgsOld(...)
 template <typename Concrete, typename... Ts>
 std::unique_ptr<Concrete> constructArgs(Ts&&... params)
 { 
-std::cout << __func__ << ": ";
-((std::cout << params << ", "), ...);
-std::cout << "\n";
+	std::cout << __func__ << ": ";
+	((std::cout << params << ", "), ...);
+	std::cout << "\n";
     
-  if constexpr (std::is_constructible_v<Concrete, Ts...>)
-      return std::make_unique<Concrete>(std::forward<Ts>(params)...);
-   else
-       return nullptr;
+	if constexpr (std::is_constructible_v<Concrete, Ts...>)
+		return std::make_unique<Concrete>(std::forward<Ts>(params)...);
+	else
+		return nullptr;
 }
 
-class IRenderer
+class Investment
 {
 public:
-	virtual ~IRenderer() { }
+	virtual ~Investment() { }
 	
-	virtual void render() = 0;
+	virtual void calcRisk() = 0;
 };
 
-class MesaRenderer : public IRenderer
+class Stock : public Investment
 {
 public:
-	MesaRenderer() { }
+	explicit Stock(const std::string&) { }
 	
-	void render() override { }
+	void calcRisk() override { }
 };
 
-class GLRenderer : public IRenderer
+class Bond : public Investment
 {
 public:
-	explicit GLRenderer(const std::string& ) { }
+	explicit Bond(const std::string&, const std::string&, int) { }
 	
-	void render() override { }
+	void calcRisk() override { }
 };
 
-class DXRenderer : public IRenderer
+class RealEstate : public Investment
 {
 public:
-	explicit DXRenderer(int , int ) { }
+	explicit RealEstate(const std::string&, double, int) { }
 	
-	void render() override { }
+	void calcRisk() override { }
 };
 
 template <typename... Ts> 
-std::unique_ptr<IRenderer> createRenderer(const std::string &name, Ts&&... params)
+std::unique_ptr<Investment> makeInvestment(const std::string &name, Ts&&... params)
 {
 	std::cout << __func__ << ", " << name << std::endl;
-    if (name == "Mesa")
-		return constructArgsOld<MesaRenderer, Ts...>(std::forward<Ts>(params)...);
-    else if (name == "GL")
-		return constructArgsOld<GLRenderer, Ts...>(std::forward<Ts>(params)...);
-    else if (name == "DX")
-		return constructArgsOld<DXRenderer, Ts...>(std::forward<Ts>(params)...);
+	
+	std::unique_ptr<Investment> pInv;
+	
+    if (name == "Stock")
+		pInv = constructArgs<Stock, Ts...>(std::forward<Ts>(params)...);
+    else if (name == "Bond")
+		pInv = constructArgs<Bond, Ts...>(std::forward<Ts>(params)...);
+    else if (name == "RealEstate")
+		pInv = constructArgs<RealEstate, Ts...>(std::forward<Ts>(params)...);
 
-	std::cout << "nullptr from \'create\'" << std::endl;
-    return nullptr;
+    if (pInv)
+    {
+        pInv->calcRisk(); // calc initial risk and cache result...
+    }
+    else
+	    std::cout << "nullptr from \'makeInvestment\'" << std::endl;
+	    
+    return pInv;
 }
 
 int main()
 {
-    auto noArgs = createRenderer("Mesa");
-    assert(noArgs);
-    auto oneArg = createRenderer("GL", "hello");
-    assert(oneArg);
-    auto twoArgs = createRenderer("DX", 2, 2.0);
-    assert(twoArgs);
-    auto nothing = createRenderer("SomethingElse", 'a');
+    auto noArgs = makeInvestment("Stock");
+    assert(!noArgs);
+    
+    auto pStock = makeInvestment("Stock", "abc");
+    assert(pStock);
+    
+    auto pBond = makeInvestment("Bond", "xyz", "2210", 5);
+    assert(pBond);
+    
+    auto pRealEstate = makeInvestment("RealEstate", "CA", 0.75, 10);
+    assert(pRealEstate);
+    
+    auto nothing = makeInvestment("SomethingElse", '?');
     assert(!nothing);
 }
