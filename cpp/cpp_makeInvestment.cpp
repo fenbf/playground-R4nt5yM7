@@ -4,7 +4,9 @@
 #include <utility>
 #include <iostream>
 
-// before
+// before C++17:
+// - enable_if_v - from C++14
+// - is_constructible - from C++11
 template <typename Concrete, typename... Ts>
 std::enable_if_t<std::is_constructible<Concrete, Ts...>::value, std::unique_ptr<Concrete> >
 constructArgsOld(Ts&&... params)
@@ -21,6 +23,10 @@ constructArgsOld(...)
     return nullptr;
 }
 
+// using C++17
+// - if constexpr
+// - is_constructible_v
+// - fold expression to print arguments
 template <typename Concrete, typename... Ts>
 std::unique_ptr<Concrete> constructArgs(Ts&&... params)
 { 
