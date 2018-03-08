@@ -11,11 +11,11 @@ constexpr T absolute(T arg) {
 }
 
 template <class T>
-constexpr enable_if_t<is_floating_point<T>::value, bool> close_enough(T a, T b) {
+constexpr std::enable_if_t<std::is_floating_point<T>::value, bool> close_enough(T a, T b) {
    return absolute(a - b) < static_cast<T>(0.000001);
 }
 template <class T>
-constexpr enable_if_t<!is_floating_point<T>::value, bool> close_enough(T a, T b) {
+constexpr std::enable_if_t<!std::is_floating_point<T>::value, bool> close_enough(T a, T b) {
    return a == b;
 }*/
 
