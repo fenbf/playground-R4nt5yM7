@@ -1,7 +1,7 @@
 // code taken (with permission from https://h-deb.clg.qc.ca/WG21/PracticalCpp/Temperature.html)
 // by Patrice Roy
 
-#include <traits>
+#include <type_traits>
 
 // C++11/14 version:
 /*
