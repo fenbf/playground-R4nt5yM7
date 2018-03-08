@@ -31,7 +31,7 @@ constexpr auto precision_threshold = T(0.000001);
 
 template <class T>
 constexpr bool close_enough(T a, T b) {
-   if constexpr (is_floating_point_v<T>)
+   if constexpr (std::is_floating_point_v<T>)
       return absolute(a - b) < precision_threshold<T>;
    else
       return a == b;
@@ -39,6 +39,6 @@ constexpr bool close_enough(T a, T b) {
 
 int main()
 {
-	auto c = close_enough(10.0f, 10.0f);
-	auto d = close_enough(90l, 90l);
+	[[maybe_unused]] auto c = close_enough(10.0f, 10.0f);
+	[[maybe_unused]] auto d = close_enough(90l, 90l);
 }
