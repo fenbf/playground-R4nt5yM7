@@ -9,6 +9,8 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[makeInvestment]({"stubs": ["cpp_makeInvestment.cpp"],"command": "sh ./run.sh cpp_makeInvestment.cpp"})
 
+@[close_enough ]({"stubs": ["cpp_close_enough.cpp"],"command": "sh ./run.sh cpp_close_enough.cpp"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
