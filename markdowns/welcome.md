@@ -11,6 +11,8 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[close_enough ]({"stubs": ["cpp_close_enough.cpp"],"command": "sh ./run.sh cpp_close_enough.cpp"})
 
+@[std::optional refactor ]({"stubs": ["cpp_refactor_into_optional.cpp"],"command": "sh ./run.sh cpp_refactor_into_optional.cpp"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
