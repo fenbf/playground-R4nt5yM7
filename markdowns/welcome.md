@@ -13,6 +13,12 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[std::optional refactor ]({"stubs": ["cpp_refactor_into_optional.cpp"],"command": "sh ./run.sh cpp_refactor_into_optional.cpp"})
 
+
+## JFT guest post:
+
+@[JFT's menu example]({"stubs": ["cpp_jft_menu.cpp"],"command": "sh ./run_with_terminal.sh cpp_jft_menu.cpp"})
+
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
