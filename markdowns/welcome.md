@@ -18,6 +18,9 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[JFT's menu example]({"stubs": ["cpp_jft_menu.cpp"],"command": "sh ./run_with_terminal.sh cpp_jft_menu.cpp"})
 
+## `from_chars`:
+
+@[`std::from_chars` Example]({"stubs": ["cpp_from_chars.cpp"],"command": "sh ./run.sh cpp_from_chars.cpp"})
 
 # Template Resources
 
