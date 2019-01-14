@@ -22,6 +22,10 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[`std::from_chars` Example]({"stubs": ["cpp_from_chars.cpp"],"command": "sh ./run.sh cpp_from_chars.cpp"})
 
+## `file_size`:
+
+@[`fs::file_size` Example]({"stubs": ["cpp_file_size.cpp"],"command": "sh ./run_filesystem.sh cpp_file_size.cpp"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
