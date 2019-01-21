@@ -26,6 +26,10 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[`fs::file_size` Example]({"stubs": ["cpp_file_size.cpp"],"command": "sh ./run_filesystem.sh cpp_file_size.cpp"})
 
+## `file_size` Permissions:
+
+@[`fs::file_size` Permission Example]({"stubs": ["cpp_file_size_perms.cpp"],"command": "sh ./run_filesystem.sh cpp_file_size_perms.cpp"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
