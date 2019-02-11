@@ -30,6 +30,10 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[`fs::file_size` Permission Example]({"stubs": ["cpp_file_size_perms.cpp"],"command": "sh ./run_filesystem.sh cpp_file_size_perms.cpp"})
 
+## overload:
+
+@[`overload tests` Permission Example]({"stubs": ["cpp_overload.cpp"],"command": "sh ./run.sh cpp_overload.cpp"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
