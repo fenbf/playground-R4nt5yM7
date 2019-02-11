@@ -32,7 +32,7 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 ## overload:
 
-@[`overload tests` Permission Example]({"stubs": ["cpp_overload.cpp"],"command": "sh ./run.sh cpp_overload.cpp"})
+@[overload pattern Example]({"stubs": ["cpp_overload.cpp"],"command": "sh ./run.sh cpp_overload.cpp"})
 
 # Template Resources
 
