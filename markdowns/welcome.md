@@ -34,6 +34,12 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[overload pattern Example]({"stubs": ["cpp_overload.cpp"],"command": "sh ./run.sh cpp_overload.cpp"})
 
+## dbg move:
+
+@[Debug Move]({"stubs": ["cpp_move_dbg.cpp"],"command": "sh ./run.sh cpp_move_dbg.cpp"})
+
+@[Debug Move - Custom Type]({"stubs": ["cpp_move_dbg_type.cpp"],"command": "sh ./run.sh cpp_move_dbg_type.cpp"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
