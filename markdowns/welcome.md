@@ -40,6 +40,10 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[Debug Move - Custom Type]({"stubs": ["cpp_move_dbg_type.cpp"],"command": "sh ./run.sh cpp_move_dbg_type.cpp"})
 
+## new new()
+
+@[Custom New With Alignment]({"stubs": ["cpp_new.cpp"],"command": "sh ./run.sh cpp_new.cpp"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
