@@ -26,7 +26,7 @@ void* operator new(std::size_t size, std::align_val_t align) {
 #ifdef _MSC_VER
 	auto ptr = _aligned_malloc(size, static_cast<std::size_t>(align));
 #else
-	auto ptr = aligned_alloc(size, static_cast<std::size_t>(align));
+	auto ptr = aligned_alloc(static_cast<std::size_t>(align), size);
 #endif
 
 	if (!ptr)
