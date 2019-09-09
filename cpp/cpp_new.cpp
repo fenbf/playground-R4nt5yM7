@@ -23,7 +23,7 @@ void operator delete(void* ptr) {
 }*/
 
 void* operator new(std::size_t size, std::align_val_t align) {
-#ifdef _MSC_VER
+#if defined(_WIN32) || defined(__CYGWIN__)
 	auto ptr = _aligned_malloc(size, static_cast<std::size_t>(align));
 #else
 	auto ptr = aligned_alloc(static_cast<std::size_t>(align), size);
@@ -37,18 +37,18 @@ void* operator new(std::size_t size, std::align_val_t align) {
 	return ptr;
 }
 
-void operator delete(void* ptr, std::size_t size, std::align_val_t align) {
+void operator delete(void* ptr, std::size_t size, std::align_val_t align) noexcept {
 	std::cout << "delete: " << size << ", align: " << static_cast<std::size_t>(align) << ", ptr : " << ptr << '\n';
-#ifdef _MSC_VER	
+#if defined(_WIN32) || defined(__CYGWIN__)
 	_aligned_free(ptr);
 #else
 	free(ptr);
 #endif
 }
 
-void operator delete(void* ptr, std::align_val_t align) {
+void operator delete(void* ptr, std::align_val_t align) noexcept {
 	std::cout << "delete: align: " << static_cast<std::size_t>(align) << ", ptr : " << ptr << '\n';
-#ifdef _MSC_VER	
+#if defined(_WIN32) || defined(__CYGWIN__)
 	_aligned_free(ptr);
 #else
 	free(ptr);
