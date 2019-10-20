@@ -44,6 +44,10 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[Custom New With Alignment]({"stubs": ["cpp_new.cpp"],"command": "sh ./run.sh cpp_new.cpp"})
 
+## IIFE
+
+@[IIFE C++ Example]({"stubs": ["cpp_iife.cpp"],"command": "sh ./run.sh cpp_iife.cpp"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
