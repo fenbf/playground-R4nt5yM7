@@ -50,7 +50,7 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 ## Lazy Init
 
-@[Lazy initialisation]({"stubs": ["cpp_lazy_worker.cpp"],"command": "sh ./run.sh cpp_lazy_worker.cpp"})
+@[Lazy initialisation]({"stubs": ["cpp_lazy_worker.cpp"],"command": "sh ./run_pthread.sh cpp_lazy_worker.cpp"})
 
 # Template Resources
 
