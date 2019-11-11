@@ -9,7 +9,7 @@
 #include <mutex>
 #include <thread>
 
-using TSalary = long; // might be replaced into decimal, fixed pos type...
+using TSalary = long; // might be replaced into decimal, fixed point type...
 
 class CompanyDatabase {
 public:
@@ -119,12 +119,9 @@ public:
     
 private:
 	void MakeSureWereReady() const {
-		if (!_rec)
-        {
-            std::scoped_lock lock(mut);
-            if (!_rec)
-		      _rec = _db->FetchRecord(_id);
-        }
+        std::scoped_lock lock(mut);
+        if (!_rec)
+          _rec = _db->FetchRecord(_id);
 	}
 
 private:
@@ -158,7 +155,7 @@ public:
     
 private:
 	void MakeSureWereReady() const {
-		if (!_rec)
+		if (!_rec) // might be problematic... double-check-locking...
         {
             std::call_once(_flag, [&]() {
             if (!_rec)
