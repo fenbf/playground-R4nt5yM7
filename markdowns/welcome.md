@@ -52,6 +52,10 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 @[Lazy initialisation]({"stubs": ["cpp_lazy_worker.cpp"],"command": "sh ./run_pthread.sh cpp_lazy_worker.cpp"})
 
+## Wehicle Generator
+
+@[Wehicle Generator]({"stubs": ["cpp_wehicle_generator.cpp"],"command": "sh ./run_with_param_no_check.sh cpp_wehicle_generator.cpp wehicle_parts.txt"})
+
 # Template Resources
 
 [`markdowns/welcome.md`](https://github.com/TechDotIO/techio-basic-template/blob/master/markdowns/welcome.md)  
