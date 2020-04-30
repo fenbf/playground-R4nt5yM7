@@ -54,7 +54,7 @@ Please refer to the [documentation](https://tech.io/doc) to learn more about add
 
 ## Wehicle Generator
 
-@[Wehicle Generator]({"stubs": ["cpp_wehicle_generator.cpp"],"command": "sh ./run_with_param_no_check.sh cpp_wehicle_generator.cpp wehicle_parts.txt"})
+@[Wehicle Generator]({"stubs": ["cpp_wehicle_generator.cpp", "wehicle_parts.txt"],"command": "sh ./run_with_param_no_check.sh cpp_wehicle_generator.cpp wehicle_parts.txt"})
 
 # Template Resources
 
